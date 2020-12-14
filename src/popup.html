@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Dragoman</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <span>Dragoman</span>
+    <h3 class="title">Dragoman</h3>
+
+    <div class="select-group">
+        <select id="input-lang">
+            <option selected>Select 1</option>
+        </select>
+        <input type="button" value="&#8651;">
+        <select  id="output-lang">
+            <option selected>Select 2</option>
+        </select>
+    </div>
+
+    <div>
+        <textarea id="input" name="input" rows="6"></textarea>
+        <input class="translate-btn" type="button" value="Translate">
+        <textarea name="output" id="output" cols="30" rows="6" disabled></textarea>
+    </div>
+    <div class="info">
+        <a href="https://github.com/nickxgrom/dragoman" target="_blank">Github project</a>
+        <span>v0.0.2</span>
+    </div>
 </body>
 </html>

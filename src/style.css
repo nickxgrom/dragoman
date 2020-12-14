@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    font-family: Ubuntu, Roboto, sans-serif;
+}
+
+body {
+    width: 300px;
+    margin: 0;
+    padding: 10px;
+}
+
+.title {
+    margin: 0 0 10px 0;
+}
+
+.select-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    resize: none;
+}
+
+.translate-btn {
+    margin-top: 10px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+a:visited {
+    color: #000;
+}
