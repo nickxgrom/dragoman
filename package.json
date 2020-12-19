@@ -1,0 +1,24 @@
+{
+  "name": "dragoman",
+  "version": "0.0.3",
+  "description": "The translation extension with select&translate feature",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.2.0"
+  },
+  "scripts": {
+    "build": "webpack --config ./config/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickxgrom/dragoman.git"
+  },
+  "author": "Nikita Gromyko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickxgrom/dragoman/issues"
+  },
+  "homepage": "https://github.com/nickxgrom/dragoman#readme"
+}
