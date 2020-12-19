@@ -3,13 +3,15 @@
   "version": "0.0.3",
   "description": "The translation extension with select&translate feature",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "translate": "^1.1.2"
+  },
   "devDependencies": {
     "webpack": "^4.44.2",
     "webpack-cli": "^4.2.0"
   },
   "scripts": {
-    "build": "webpack --config ./config/build.js"
+    "build": "webpack --config config/production.config.js"
   },
   "repository": {
     "type": "git",
