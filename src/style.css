@@ -19,6 +19,10 @@ body {
     justify-content: space-between;
 }
 
+select {
+    width: 50%;
+}
+
 textarea {
     width: 100%;
     box-sizing: border-box;
