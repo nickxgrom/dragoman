@@ -11,7 +11,15 @@ const sourceInput = document.getElementById("source-input"),
     sourceLanguage = document.getElementById("source-language"),
     targetLanguage = document.getElementById("target-language");
 
-translateBtn.addEventListener("click", () => {
+translateBtn.addEventListener("click", () => { translationEvent() });
+sourceInput.addEventListener("keydown", (event) => {
+    if (event.code === "Enter") {
+        translationEvent();
+        translateBtn.focus();
+    }
+})
+
+function translationEvent() {
     translate( sourceInput.value, { from: sourceLanguage.value, to: targetLanguage.value, } )
         .then( text => {
             targetInput.value = text;
@@ -19,4 +27,4 @@ translateBtn.addEventListener("click", () => {
         .catch( err => {
             targetInput.value = err;
         } )
-})
+}
