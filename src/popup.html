@@ -19,11 +19,15 @@
     <div>
         <textarea id="source-input" name="input" rows="6"></textarea>
         <input class="translate-btn" type="button" value="Translate">
-        <textarea id="target-input" name="output" cols="30" rows="6" readonly></textarea>
+        <div class="copy-group">
+            <textarea id="target-input" name="output" cols="30" rows="6" readonly title="Click here to copy text to clipboard"></textarea>
+            <img class="copy-icon" src="copy.svg" alt="">
+        </div>
+
     </div>
     <div class="info">
         <a href="https://github.com/nickxgrom/dragoman" target="_blank">Github project</a>
-        <span>v1.0.0</span>
+        <span>v1.1.0</span>
     </div>
 
     <script src="../dist/bundle.js"></script>

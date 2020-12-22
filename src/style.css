@@ -17,6 +17,7 @@ body {
 .select-group {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 select {
@@ -27,17 +28,28 @@ select {
     background-color: #F8F8F8;
     border-color: #D0D0D0;
     outline: none;
+    cursor: pointer;
 }
 
 textarea {
     width: 100%;
     box-sizing: border-box;
-    margin-top: 10px;
     resize: none;
 }
 
 .translate-btn {
-    margin-top: 10px;
+    margin: 10px 0 10px 0;
+}
+
+.copy-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.copy-group {
+    position: relative;
+    cursor: pointer;
 }
 
 .info {
