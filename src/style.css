@@ -23,6 +23,12 @@ select {
     width: 40%;
 }
 
+#target-input {
+    background-color: #F8F8F8;
+    border-color: #D0D0D0;
+    outline: none;
+}
+
 textarea {
     width: 100%;
     box-sizing: border-box;

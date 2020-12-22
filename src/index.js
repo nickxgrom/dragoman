@@ -38,6 +38,12 @@ switchLangBtn.onclick = () => {
     selectedTargetOption.innerText = srcTxt;
 }
 
+targetInput.addEventListener("click", () => {
+    targetInput.select();
+    document.execCommand("copy");
+    sourceInput.focus();
+})
+
 function translationEvent() {
     translate( sourceInput.value, { from: sourceLanguage.value, to: targetLanguage.value, } )
         .then( text => {
