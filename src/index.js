@@ -8,14 +8,15 @@ generateOptions();
 const sourceInput = document.getElementById("source-input"),
     targetInput = document.getElementById("target-input"),
     translateBtn = document.querySelector(".translate-btn"),
+    sourceLanguage = document.getElementById("source-language"),
     targetLanguage = document.getElementById("target-language");
 
 translateBtn.addEventListener("click", () => {
-    translate(sourceInput.value, targetLanguage.value)
+    translate( sourceInput.value, { from: sourceLanguage.value, to: targetLanguage.value, } )
         .then( text => {
             targetInput.value = text;
         } )
         .catch( err => {
-            console.log(err)
+            targetInput.value = err;
         } )
 })
