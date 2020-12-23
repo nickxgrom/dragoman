@@ -1,6 +1,6 @@
 {
   "name": "dragoman",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "The translation extension with select&translate feature",
   "main": "index.js",
   "dependencies": {

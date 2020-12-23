@@ -12,6 +12,8 @@ const sourceInput = document.getElementById("source-input"),
     sourceLanguage = document.getElementById("source-language"),
     targetLanguage = document.getElementById("target-language");
 
+sourceInput.value = window.localStorage.getItem('msgToTranslate');
+
 translateBtn.addEventListener("click", () => { translationEvent() });
 sourceInput.addEventListener("keydown", (event) => {
     if (event.code === "Enter") {
