@@ -3,4 +3,3 @@ chrome.runtime.onMessage.addListener(
         window.localStorage.setItem('msgToTranslate', message.txt);
     }
 );
-
