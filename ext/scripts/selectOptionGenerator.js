@@ -9,12 +9,12 @@ function generateOptions() {
 
         sourceSelectOption.value = language.code;
         sourceSelectOption.innerText = language.name;
-        if (language.code === "en") {
+        if (language.code === window.localStorage.getItem("sourceLang")) {
             sourceSelectOption.selected = true;
         }
 
         let targetSelectOption = sourceSelectOption.cloneNode(true);
-        if (language.code === "ru") {
+        if (language.code === window.localStorage.getItem("targetLang")) {
             targetSelectOption.selected = true
         }
 

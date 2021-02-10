@@ -15,6 +15,11 @@ const sourceInput = document.getElementById("source-input"),
 sourceInput.value = window.localStorage.getItem('msgToTranslate');
 sourceInput.focus();
 
+sourceLanguage.addEventListener('change', (event) => {
+    window.localStorage.setItem('sourceLang', event.target.value) })
+targetLanguage.addEventListener('change', (event) => {
+    window.localStorage.setItem('targetLang', event.target.value) })
+
 translateBtn.addEventListener("click", () => { translationEvent() });
 sourceInput.addEventListener("keydown", (event) => {
     if (event.code === "Enter") {
@@ -43,6 +48,10 @@ switchLangBtn.onclick = () => {
 
     selectedTargetOption.value = srcVal;
     selectedTargetOption.innerText = srcTxt;
+
+    let sourceLang = window.localStorage.getItem('sourceLang')
+    window.localStorage.setItem('sourceLang', window.localStorage.getItem('targetLang'))
+    window.localStorage.setItem('targetLang', sourceLang)
 
     translationEvent();
 }
