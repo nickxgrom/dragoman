@@ -37,9 +37,10 @@ switchLangBtn.onclick = () => {
     window.localStorage.setItem('sourceLang', window.localStorage.getItem('targetLang'))
     window.localStorage.setItem('targetLang', sourceLang)
 
-    sourceInput.value = targetInput.value;
-
-    translationEvent();
+    if (!sourceInput.value) {
+        sourceInput.value = targetInput.value;
+        translationEvent();
+    }
 }
 
 targetInput.addEventListener("click", () => {
