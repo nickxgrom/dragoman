@@ -29,29 +29,15 @@ sourceInput.addEventListener("keydown", (event) => {
 })
 
 switchLangBtn.onclick = () => {
-    let selectedSourceOption = Array.from(sourceLanguage.childNodes).find( item => {
-        return item.selected;
-    }),
-        selectedTargetOption = Array.from(targetLanguage.childNodes).find( item => {
-        return item.selected;
-    })
-
-    let srcVal = selectedSourceOption.value,
-        srcTxt = selectedSourceOption.innerText;
-
-    selectedSourceOption.value = selectedTargetOption.value;
-    selectedSourceOption.innerText = selectedTargetOption.innerText;
-
-    let sourceInputText = sourceInput.value;
-    sourceInput.value = targetInput.value;
-    targetInput.value = sourceInputText;
-
-    selectedTargetOption.value = srcVal;
-    selectedTargetOption.innerText = srcTxt;
+    let srcLangSelectedId = sourceLanguage.selectedIndex
+    sourceLanguage.selectedIndex = targetLanguage.selectedIndex
+    targetLanguage.selectedIndex = srcLangSelectedId
 
     let sourceLang = window.localStorage.getItem('sourceLang')
     window.localStorage.setItem('sourceLang', window.localStorage.getItem('targetLang'))
     window.localStorage.setItem('targetLang', sourceLang)
+
+    sourceInput.value = targetInput.value;
 
     translationEvent();
 }
