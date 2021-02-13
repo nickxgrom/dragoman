@@ -33,6 +33,7 @@ select {
 
 textarea {
     width: 100%;
+    height: 100px;
     box-sizing: border-box;
     resize: none;
 }
@@ -50,6 +51,25 @@ textarea {
 .copy-group {
     position: relative;
     cursor: pointer;
+}
+
+.copy-message-success {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    background-color: #c3c3c3;
+    opacity: 0;
+    transition: opacity .3s ease-in;
+    font-size: 2em;
+}
+
+.copy-message-success-visible {
+    opacity: .6;
 }
 
 .info {

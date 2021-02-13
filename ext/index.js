@@ -44,9 +44,16 @@ switchLangBtn.onclick = () => {
 }
 
 targetInput.addEventListener("click", () => {
-    targetInput.select();
-    document.execCommand("copy");
-    sourceInput.focus();
+    if (targetInput.value) {
+        targetInput.select();
+        document.execCommand("copy");
+        sourceInput.focus();
+        const copyMsg = document.querySelector(".copy-message-success")
+        copyMsg.classList.add("copy-message-success-visible")
+        setTimeout(() => {
+            copyMsg.classList.remove("copy-message-success-visible")
+        }, 600)
+    }
 })
 
 function translationEvent() {
