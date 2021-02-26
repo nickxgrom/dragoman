@@ -1,6 +1,6 @@
 {
   "name": "Dragoman",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "The translation extension with select&translate feature",
   "browser_action": {
     "default_popup": "popup.html",
