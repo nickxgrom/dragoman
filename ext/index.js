@@ -29,6 +29,21 @@ sourceInput.addEventListener("keydown", (event) => {
 })
 
 switchLangBtn.onclick = () => {
+    switchLanguages()
+}
+let keys = new Set()
+window.addEventListener('keydown', event => {
+    keys.add(event.code)
+    if (keys.has('ShiftLeft') && keys.has('ControlLeft')) {
+        switchLanguages()
+    }
+})
+
+window.addEventListener('keyup', event => {
+    keys.clear()
+})
+
+function switchLanguages() {
     let srcLangSelectedId = sourceLanguage.selectedIndex
     sourceLanguage.selectedIndex = targetLanguage.selectedIndex
     targetLanguage.selectedIndex = srcLangSelectedId
@@ -41,6 +56,7 @@ switchLangBtn.onclick = () => {
         sourceInput.value = targetInput.value;
         translationEvent();
     }
+    sourceInput.focus()
 }
 
 targetInput.addEventListener("click", () => {
